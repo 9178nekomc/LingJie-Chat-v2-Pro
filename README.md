@@ -90,6 +90,89 @@ print(pipe.answer("What is their sum?", minimal=True, history=hist))
 | `training_args.json` | 完整训练超参数 |
 
 
+## JAM 架构详解
+
+LingJie-Chat-v2-Pro 采用自研的 **JAM（Joint Attention–Convolution Model，联合注意力-卷积模型）** 架构——
+内部代号 GCA-60（Gate-Convolution-Attention, 60M）。设计哲学：**小模型不做通用智能，
+在"算术识别 + 工具调用协议"这一窄域做到极致；能力分离——模型负责识别与决策，计算交给工具。**
+
+### 总体数据流
+
+```
+tokens (8017 词表)
+    ↓
+[词嵌入 8017×640]（与 LM Head 权重共享）
+    ↓
+12 × JAM Block
+    ├── ① Pre-norm RMSNorm → RoPE 因果自注意力（8 头 × 80 维）
+    ├── ② Pre-norm RMSNorm → 深度因果卷积（k=5，逐通道）
+    ├── ③ Pre-norm RMSNorm → SwiGLU 门控 FFN（d_ff=1365）
+    └── 每个子层残差连接
+    ↓
+[RMSNorm] → [LM Head]（与嵌入共享权重）
+    ↓
+输出 logits
+```
+
+### JAM Block 的三个联合子层
+
+每个 Block 由三条通路**联合**组成，各自捕捉不同尺度的模式，这是 "Joint" 的含义：
+
+**① 全局通路：RoPE 因果自注意力（1.64M 参数/层）**
+- 8 头 × 80 维，旋转位置编码（RoPE, theta=10000）
+- 负责长程依赖：多轮对话中"their sum"对两轮之前数字的指代、上下文状态追踪
+
+**② 局部通路：深度因果卷积（0.0032M 参数/层，几乎免费）**
+- kernel=5、逐通道（depthwise）、左填充因果卷积
+- 专为算术设计的归纳偏置：数字串 "1 2 3 4 + 5 6 7" 的位值模式是严格局部的，
+  卷积核一眼扫过即可确认数字边界，不必动用注意力
+- 这是 JAM 与标准 Transformer 块最大的结构差异：**第三个子层**
+
+**③ 门控通路：SwiGLU FFN（2.62M 参数/层）**
+- `down( silu(gate(x)) ⊙ up(x) )`，d_ff=1365（≈2.13× d_model）
+- 事实性/模式性计算的主力
+
+三条通路全部 Pre-norm（RMSNorm，无均值中心化，小模型训练更稳）+ 残差。
+
+### 多模块 Head（仅 SFT 激活，0.083M 参数）
+
+主干之外挂 6 个单线性判别头，把"行为"从生成 logits 中解耦出来直接监督：
+
+| Head | 任务 | 类别数 |
+|------|------|--------|
+| Intent | 是否算术请求 | 2 |
+| Integrity | 信息是否完整 | 2 |
+| Parser | 数字边界逐 token 标注 | 4 |
+| Critic | 表达式与问题一致性 | 2 |
+| Template | 回复模板选择 | 100 |
+| Verb | 运算动词识别 | 20 |
+
+SFT 损失 = LM 损失（仅 assistant 段）+ 0.3·Intent + 0.2·Integrity + 0.2·Parser + 0.1·Critic + 0.1·Template + 0.1·Verb
+
+### Tokenizer：数字强制单字切分（JAM 的配套设计）
+
+BPE 词表 8017 = ByteLevel BPE 8000 + 13 特殊 token + 4 对话 token。
+所有数字在 BPE 前强制按单字符切分（`4827 → 4/8/2/7`），推理时同样处理——
+这是模型能逐位复述计算结果的结构性前提。解码永不合并空格，评测用 `normalize_for_eval` 对齐。
+
+### 参数账
+
+| 模块 | 参数量 |
+|------|--------|
+| 嵌入（与 LM Head 共享） | 5.14M |
+| 12 层主干（3×1.64M + 3×2.62M + conv/LN ≈ 4.27M/层） | 51.20M |
+| 多模块 Head | 0.083M |
+| **合计** | **56.42M** |
+
+### 训练配方
+
+| 阶段 | 数据 | 超参 |
+|------|------|------|
+| 预训练 | 1.2B tokens（程序生成 89% + TinyStories 11%） | AdamW 3e-4，cosine，batch 256×1024 |
+| SFT v2-Pro | 14 万条（6 万单轮 + 4 万多轮对话 + 重放） | AdamW 1e-5，2 epochs，assistant 段掩码 |
+
+完整超参见 `training_args.json`；数据重建流程见下文。
+
 ## 仓库结构与下载
 
 | 内容 | 位置 |
