@@ -1,0 +1,34 @@
+Loading weights:   0%|          | 0/76 [00:00<?, ?it/s]Loading weights: 100%|██████████| 76/76 [00:00<00:00, 4643.16it/s]
+
+===== pythia-70m (bare) =====
+  arith       0/175 = 0.000
+  multi       0/25 = 0.000
+  clarify     0/40 = 0.000
+  cannot      0/40 = 0.000
+  neg         40/40 = 1.000
+  correction  2/80 = 0.025
+  TOTAL       42/400 = 0.105
+  FAIL[arith] How much is 82 split by 40?
+      -> '\n\nA:\n\nThe answer is:\n\nThe answer is:\n\nThe answer is:\n\nThe answer is:\n\nThe answer is:\n\nThe answer is:\n\nThe answ'
+  FAIL[arith] Can you work out 3714 multiplied with 853?
+      -> ' No, I have no idea.\n\nA:\n\nI have a problem with the following code.\n#include <stdio.h>\n#include <stdlib.h>\n#in'
+  FAIL[multi] What is (5418-168)/11?
+      -> '\n\nA:\n\nI think you are correct.\n\nA:\n\nI think the problem is that the first part of the question is the same as '
+  FAIL[arith] Compute 757589 and 85751.
+      -> '\nI have a problem with the following code:\npublic class Main {\n    public static void main(String[] args) {\n  '
+  FAIL[arith] Do the math: 6985 take away 935.
+      -> '\n\nI have a problem with the following code:\n$x = 1;\n$y = 1;\n$z = 1;\n$x = 2;\n$y = 2;\n$z = 2;\n'
+  FAIL[clarify] What is plus 14?
+      -> '\n\nI have a problem with the following code:\npublic class Main {\n    public static void main(String[] args) {\n '
+  FAIL[cannot] Compute 70522281 multiplied by 82.
+      -> '\n\nA:\n\nI think the answer is correct.\n\nA:\n\nThe answer is correct.\n\nA:\n\nThe answer is correct.\n\nA:\n\nThe answer i'
+  FAIL[correction] I think 54 plus 69 is 125.
+      -> '\nI think the answer is "Yes"\n\nA:\n\nI think the answer is "Yes"\n\nA:\n\nThe answer is "Yes"\n\nA:\n\nI think the answer'
+  FAIL[correction] I think 69 split by 41 is -18.3171.
+      -> '\nI think the answer is -18.3171.\nI think the answer is -18.3171.\nI think the answer is -18.3171.\nI think the a'
+  FAIL[arith] I need the result of 10 plus 12.
+      -> '\nI have a problem with the result of 10 plus 12.\n\nA:\n\nI have a problem with the result of 10 plus 12.\nI have a'
+  FAIL[arith] How much is 5 over 50?
+      -> '\nI have a problem with the following code:\npublic class MyClass\n{\n    public string Name { get; set; }\n    pub'
+  FAIL[multi] What is (99/20)+9?
+      -> '\n\nI have a problem with the following code.\n\nA:\n\nI have a problem with the following code.\n\nA:\n\nYou are using '

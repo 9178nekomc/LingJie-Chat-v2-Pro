@@ -1,0 +1,10 @@
+{
+  "type": "ByteLevel BPE",
+  "vocab_size": 8017,
+  "bpe_base": 8000,
+  "special_tokens": 13,
+  "dialog_tokens": 4,
+  "digit_single_token": true,
+  "preprocess_for_bpe": "re.sub(r'(\\d)', r' \\1 ', text) + collapse spaces",
+  "normalize_for_eval": "collapse spaces between digits/operators/punctuation"
+}

@@ -1,0 +1,18 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" fill="#ffffff"/>
+  <g fill="none" stroke-linecap="round">
+        <path d="M 442.0 256.0 A 210 210 0 0 1 94.9 349.0" stroke="#ffffff" stroke-width="58"/>
+    <path d="M 442.0 256.0 A 210 210 0 0 1 94.9 349.0" stroke="#0d0d0d" stroke-width="32"/>
+    <path d="M 349.0 417.1 A 210 210 0 0 1 94.9 163.0" stroke="#ffffff" stroke-width="58"/>
+    <path d="M 349.0 417.1 A 210 210 0 0 1 94.9 163.0" stroke="#0d0d0d" stroke-width="32"/>
+    <path d="M 163.0 417.1 A 210 210 0 0 1 256.0 70.0" stroke="#ffffff" stroke-width="58"/>
+    <path d="M 163.0 417.1 A 210 210 0 0 1 256.0 70.0" stroke="#0d0d0d" stroke-width="32"/>
+    <path d="M 70.0 256.0 A 210 210 0 0 1 417.1 163.0" stroke="#ffffff" stroke-width="58"/>
+    <path d="M 70.0 256.0 A 210 210 0 0 1 417.1 163.0" stroke="#0d0d0d" stroke-width="32"/>
+    <path d="M 163.0 94.9 A 210 210 0 0 1 417.1 349.0" stroke="#ffffff" stroke-width="58"/>
+    <path d="M 163.0 94.9 A 210 210 0 0 1 417.1 349.0" stroke="#0d0d0d" stroke-width="32"/>
+    <path d="M 349.0 94.9 A 210 210 0 0 1 256.0 442.0" stroke="#ffffff" stroke-width="58"/>
+    <path d="M 349.0 94.9 A 210 210 0 0 1 256.0 442.0" stroke="#0d0d0d" stroke-width="32"/>
+    <g transform="translate(256,256) scale(0.55) translate(-256,-256)"><path d="M 438.0 256.0 A 2600 2600 0 0 1 98.4 347.0" stroke="#ffffff" stroke-width="83.6"/><path d="M 438.0 256.0 A 2600 2600 0 0 1 98.4 347.0" stroke="#0d0d0d" stroke-width="40.0"/><path d="M 347.0 413.6 A 2600 2600 0 0 1 98.4 165.0" stroke="#ffffff" stroke-width="83.6"/><path d="M 347.0 413.6 A 2600 2600 0 0 1 98.4 165.0" stroke="#0d0d0d" stroke-width="40.0"/><path d="M 165.0 413.6 A 2600 2600 0 0 1 256.0 74.0" stroke="#ffffff" stroke-width="83.6"/><path d="M 165.0 413.6 A 2600 2600 0 0 1 256.0 74.0" stroke="#0d0d0d" stroke-width="40.0"/><path d="M 74.0 256.0 A 2600 2600 0 0 1 413.6 165.0" stroke="#ffffff" stroke-width="83.6"/><path d="M 74.0 256.0 A 2600 2600 0 0 1 413.6 165.0" stroke="#0d0d0d" stroke-width="40.0"/><path d="M 165.0 98.4 A 2600 2600 0 0 1 413.6 347.0" stroke="#ffffff" stroke-width="83.6"/><path d="M 165.0 98.4 A 2600 2600 0 0 1 413.6 347.0" stroke="#0d0d0d" stroke-width="40.0"/><path d="M 347.0 98.4 A 2600 2600 0 0 1 256.0 438.0" stroke="#ffffff" stroke-width="83.6"/><path d="M 347.0 98.4 A 2600 2600 0 0 1 256.0 438.0" stroke="#0d0d0d" stroke-width="40.0"/></g>
+  </g>
+</svg>

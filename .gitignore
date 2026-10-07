@@ -1,0 +1,17 @@
+ckpt/
+hf_cache/
+ms_repo/
+export/pretrain_weights.pt
+data/*.npy
+data/*.npy.meta.json
+data/pretrain_gen/
+data/pretrain_gen2/
+data/curriculum/
+data/ts_stories.txt
+data/sft_multiturn.jsonl.bak
+data/sft_mt_test.jsonl
+lingjie_v1*.tar
+logs/download*.log
+__pycache__/
+*.pyc
+nohup.out

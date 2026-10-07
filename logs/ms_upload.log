@@ -1,0 +1,39 @@
+
+ _   .-')                _ .-') _     ('-.             .-')                              _ (`-.    ('-.
+( '.( OO )_             ( (  OO) )  _(  OO)           ( OO ).                           ( (OO  ) _(  OO)
+ ,--.   ,--.).-'),-----. \     .'_ (,------.,--.     (_)---\_)   .-----.  .-'),-----.  _.`     \(,------.
+ |   `.'   |( OO'  .-.  ',`'--..._) |  .---'|  |.-') /    _ |   '  .--./ ( OO'  .-.  '(__...--'' |  .---'
+ |         |/   |  | |  ||  |  \  ' |  |    |  | OO )\  :` `.   |  |('-. /   |  | |  | |  /  | | |  |
+ |  |'.'|  |\_) |  |\|  ||  |   ' |(|  '--. |  |`-' | '..`''.) /_) |OO  )\_) |  |\|  | |  |_.' |(|  '--.
+ |  |   |  |  \ |  | |  ||  |   / : |  .--'(|  '---.'.-._)   \ ||  |`-'|   \ |  | |  | |  .___.' |  .--'
+ |  |   |  |   `'  '-'  '|  '--'  / |  `---.|      | \       /(_'  '--'\    `'  '-'  ' |  |      |  `---.
+ `--'   `--'     `-----' `-------'  `------'`------'  `-----'    `-----'      `-----'  `--'      `------'
+
+2026-10-07 21:02:23,462 | INFO    | modelscope_hub.upload | Preparing files to upload ...
+2026-10-07 21:02:23,466 | INFO    | modelscope_hub.upload | Prepared 16 files for upload.
+2026-10-07 21:02:23,466 | INFO    | modelscope_hub.upload | Checking 16 files to upload ...
+2026-10-07 21:02:23,600 | INFO    | modelscope_hub.upload | Commit plan: 1 batch(es), 16 pending, 0 skipped (target 16 ops, request budget 8388608 bytes): 16 ops/124652 bytes/4 LFS
+2026-10-07 21:02:24,258 | INFO    | modelscope_hub.upload | Hashed 4 LFS candidate(s) for batch pre-validation.
+2026-10-07 21:02:24,379 | INFO    | modelscope_hub.upload | Pre-validated 4/4 distinct blob(s) for 4 file(s) in 1 request(s): 0 already stored, 4 to upload.
+2026-10-07 21:02:24,379 | INFO    | modelscope_hub.upload | Scan complete: 16 total, 0 committed (skip), 16 to process.
+2026-10-07 21:02:24,379 | INFO    | modelscope_hub.upload | Uploading 16 file(s) in 1 batch(es) (pipeline mode).
+Uploading folder ms_repo → LingJie2026/LingJie-Chat-v2-Pro:/
+[Uploading weights/sft_last.pt]:   0%|          | 0.00/226M [00:00<?, ?B/s]
+[Committing batches]:   0%|          | 0/1 [00:00<?, ?it/s][A[Uploading weights/sft_last.pt]:   0%|          | 115k/226M [00:00<03:49, 985kB/s][Uploading weights/sft_last.pt]:   1%|▏         | 3.16M/226M [00:00<00:12, 17.2MB/s][Uploading weights/sft_last.pt]:   6%|▋         | 14.5M/226M [00:00<00:03, 59.5MB/s][Uploading weights/sft_last.pt]:  12%|█▏        | 28.0M/226M [00:00<00:02, 88.8MB/s][Uploading weights/sft_last.pt]:  16%|█▋        | 37.1M/226M [00:00<00:02, 89.5MB/s][Uploading weights/sft_last.pt]:  22%|██▏       | 50.1M/226M [00:00<00:01, 103MB/s] [Uploading weights/sft_last.pt]:  27%|██▋       | 60.5M/226M [00:00<00:01, 103MB/s][Uploading weights/sft_last.pt]:  33%|███▎      | 73.7M/226M [00:00<00:01, 112MB/s][Uploading weights/sft_last.pt]:  38%|███▊      | 85.0M/226M [00:00<00:01, 105MB/s][Uploading weights/sft_last.pt]:  42%|████▏     | 95.6M/226M [00:01<00:01, 100MB/s][Uploading weights/sft_last.pt]:  47%|████▋     | 106M/226M [00:01<00:01, 100MB/s] [Uploading weights/sft_last.pt]:  51%|█████▏    | 116M/226M [00:01<00:01, 99.9MB/s][Uploading weights/sft_last.pt]:  56%|█████▌    | 126M/226M [00:01<00:01, 99.2MB/s][Uploading weights/sft_last.pt]:  60%|██████    | 136M/226M [00:01<00:00, 96.7MB/s][Uploading weights/sft_last.pt]:  64%|██████▍   | 146M/226M [00:01<00:00, 96.8MB/s][Uploading weights/sft_last.pt]:  69%|██████▉   | 156M/226M [00:01<00:00, 97.7MB/s][Uploading weights/sft_last.pt]:  73%|███████▎  | 166M/226M [00:01<00:00, 98.6MB/s][Uploading weights/sft_last.pt]:  78%|███████▊  | 176M/226M [00:01<00:00, 98.5MB/s][Uploading weights/sft_last.pt]:  82%|████████▏ | 185M/226M [00:01<00:00, 98.5MB/s][Uploading weights/sft_last.pt]:  87%|████████▋ | 195M/226M [00:02<00:00, 98.1MB/s][Uploading weights/sft_last.pt]:  91%|█████████ | 205M/226M [00:02<00:00, 99.0MB/s][Uploading weights/sft_last.pt]:  96%|█████████▌| 216M/226M [00:02<00:00, 99.7MB/s][Uploading weights/sft_last.pt]: 100%|██████████| 226M/226M [00:02<00:00, 83.0MB/s]
+2026-10-07 21:02:28,792 | INFO    | modelscope_hub.upload | Batch 1/1: committed 16 file(s).
+
+[Committing batches]: 100%|██████████| 1/1 [00:04<00:00,  4.40s/it][A[Committing batches]: 100%|██████████| 1/1 [00:04<00:00,  4.40s/it]
+============================================================
+Upload Report
+------------------------------------------------------------
+  Total files       : 16
+  Skipped (cached)  : 0
+  Normal committed  : 12
+  LFS existed       : 0
+  LFS uploaded PUT  : 4
+  Failed            : 0
+  Committed         : 16
+  Deleted (sync)    : 0
+  Elapsed           : 5.3s
+============================================================
+Folder upload complete.

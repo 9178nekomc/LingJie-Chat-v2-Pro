@@ -1,0 +1,100 @@
+===== dialogue 1 (expected T2=73, T3=146)
+  T1 Q: My two numbers are 55 and 18.
+      RAW: 'The final result is 73.'
+  T2 Q: What is their sum?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=73 -> FAIL
+  T3 Q: How much is that times 2?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=146 -> FAIL
+
+===== dialogue 2 (expected T2=131, T3=1048)
+  T1 Q: My two numbers are 80 and 51.
+      RAW: 'The final result is 131.'
+  T2 Q: What is their sum?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=131 -> FAIL
+  T3 Q: How much is that times 8?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=1048 -> FAIL
+
+===== dialogue 3 (expected T2=80, T3=320)
+  T1 Q: My two numbers are 43 and 37.
+      RAW: 'The final result is 80.'
+  T2 Q: What is their sum?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=80 -> FAIL
+  T3 Q: How much is that times 4?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=320 -> FAIL
+
+===== dialogue 4 (expected T2=132, T3=264)
+  T1 Q: My two numbers are 67 and 65.
+      RAW: 'The final result is 132.'
+  T2 Q: What is their sum?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=132 -> FAIL
+  T3 Q: How much is that times 2?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=264 -> FAIL
+
+===== dialogue 5 (expected T2=84, T3=336)
+  T1 Q: My two numbers are 62 and 22.
+      RAW: 'The final result is 84.'
+  T2 Q: What is their sum?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=84 -> FAIL
+  T3 Q: How much is that times 4?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=336 -> FAIL
+
+===== dialogue 6 (expected T2=174, T3=1566)
+  T1 Q: My two numbers are 75 and 99.
+      RAW: 'The final result is 174.'
+  T2 Q: What is their sum?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=174 -> FAIL
+  T3 Q: How much is that times 9?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=1566 -> FAIL
+
+===== dialogue 7 (expected T2=22, T3=88)
+  T1 Q: My two numbers are 17 and 5.
+      RAW: 'The answer is 22.'
+  T2 Q: What is their sum?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=22 -> FAIL
+  T3 Q: How much is that times 4?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=88 -> FAIL
+
+===== dialogue 8 (expected T2=86, T3=344)
+  T1 Q: My two numbers are 66 and 20.
+      RAW: 'The final result is 86.'
+  T2 Q: What is their sum?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=86 -> FAIL
+  T3 Q: How much is that times 4?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=344 -> FAIL
+
+===== dialogue 9 (expected T2=62, T3=248)
+  T1 Q: My two numbers are 45 and 17.
+      RAW: 'The final result is 62.'
+  T2 Q: What is their sum?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=62 -> FAIL
+  T3 Q: How much is that times 4?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=248 -> FAIL
+
+===== dialogue 10 (expected T2=125, T3=625)
+  T1 Q: My two numbers are 93 and 32.
+      RAW: 'The final result is 125.'
+  T2 Q: What is their sum?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=125 -> FAIL
+  T3 Q: How much is that times 5?
+      RAW: '<CANNOT> I can only help with arithmetic. I cannot answer questions about capitals.'
+      judge: last_num=None want=625 -> FAIL
+

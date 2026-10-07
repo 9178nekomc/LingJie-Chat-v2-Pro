@@ -1,0 +1,174 @@
+
+===== LingJie-Chat-v2-Pro (56M) =====
+  arith       174/175 = 0.994
+  multi       25/25 = 1.000
+  clarify     40/40 = 1.000
+  cannot      40/40 = 1.000
+  neg         40/40 = 1.000
+  correction  69/80 = 0.863
+  TOTAL       388/400 = 0.970
+  FAIL[correction] I think 27 take away 11 is 26.
+      -> 'The final result is 23..'
+  FAIL[correction] I think 64 product of 25 is 1610.
+      -> 'The total is 89. Not 1610.'
+  FAIL[correction] I think 96 over 68 is -0.5882000000000001.
+      -> '<CANNOT> I can only handle numbers with up to 6 digits.'
+  FAIL[correction] I think 94 divided by 91 is -0.9670000000000001.
+      -> '<CANNOT> I can only handle numbers with up to 6 digits.'
+  FAIL[correction] I think 98 twice by 59 is 5780.
+      -> 'The final result is 3481. Not 5780.'
+  FAIL[correction] I think 37 over 99 is -0.6263000000000001.
+      -> '<CANNOT> I can only handle numbers with up to 6 digits.'
+  FAIL[correction] I think 17 product of 17 is 269.
+      -> 'The answer is 23.'
+  FAIL[correction] I think 39 divided by 32 is 0.2188000000000001.
+      -> '<CANNOT> I can only handle numbers with up to 6 digits.'
+  FAIL[correction] I think 80 plus 90 is 169.
+      -> 'The value is 891. Not 169.'
+  FAIL[arith] Calculate 85 multiplied by 75.
+      -> '85*75. equals 6375.'
+  FAIL[correction] I think 64 multiplied by 13 is 831.
+      -> 'The final result is 146. Not 831.'
+  FAIL[correction] I think 57 shared by 12 is 2.75.
+      -> 'The answer is 69. Not 2.75.'
+[engine] loading tokenizer...
+[engine] vocab: 722
+[engine] loading model...
+[engine] pretrain loaded
+LoRA applied to 64 layers
+[engine] LoRA loaded
+Loading weights:   0%|          | 0/76 [00:00<?, ?it/s]Loading weights: 100%|██████████| 76/76 [00:00<00:00, 4263.99it/s]
+
+===== pythia-70m (bare->harnessed) =====
+  arith       174/175 = 0.994
+  multi       25/25 = 1.000
+  clarify     0/40 = 0.000
+  cannot      19/40 = 0.475
+  neg         40/40 = 1.000
+  correction  2/80 = 0.025
+  TOTAL       260/400 = 0.650
+  FAIL[clarify] What is plus 14?
+      -> '\n\nI have a problem with the following code:\npublic class Main {\n    public static void main(String[] args) {\n '
+  FAIL[correction] I think 54 plus 69 is 125.
+      -> '\nI think the answer is "Yes"\n\nA:\n\nI think the answer is "Yes"\n\nA:\n\nThe answer is "Yes"\n\nA:\n\nI think the answer'
+  FAIL[correction] I think 69 split by 41 is -18.3171.
+      -> '\nI think the answer is -18.3171.\nI think the answer is -18.3171.\nI think the answer is -18.3171.\nI think the a'
+  FAIL[clarify] Add them.
+      -> '\n\nI have a problem with the following code:\n$ "A" = "A"\n$ "B" = "B"\n$ "C" = "C"\n$ "D" = "D"\n'
+  FAIL[correction] I think 39 split by 67 is 1.5821.
+      -> '\nI think the answer is 1.5821.\n\nA:\n\nI think the answer is 1.5821.\n\nA:\n\nI think the answer is 1.5821.\n\nA:\n'
+  FAIL[correction] I think 99 minus 79 is 120.
+      -> '\nI think the answer is "I think 99 is 120".\n\nA:\n\nI think 99 is 120.\n\nA:\n\nI think the answer is "I think 99 is '
+  FAIL[clarify] Divide it.
+      -> '\n\nI have a problem with the following code.\n\nA:\n\nI have a problem with the following code:\n\nA:\n\nI have a probl'
+  FAIL[correction] I think 41 sum of 72 is 93.
+      -> '\nI think the answer is:\nI think the answer is:\nI think the answer is:\nI think the answer is:\nI think the answe'
+  FAIL[correction] I think 45 multiplied with 39 is 1745.
+      -> '\nI think the answer is:\n1.\n\nA:\n\nI think the answer is:\n1.\n\nA:\n\nI think the answer is:\n1.\n\nA:\n\nI think'
+  FAIL[clarify] How much is 66 plus?
+      -> '\nI have a problem with the following code:\npublic class MyClass : Class\n{\n    public int i;\n    public int i2;'
+  FAIL[cannot] What is the capital of France, and what is 2 plus 2?
+      -> '\n\nThe capital of France is a small country, and the capital of France is a small country.\n\nA:\n\nThe capital of '
+  FAIL[correction] I think 40 sum of 77 is 119.
+      -> '\nI think the answer is:\nI think the answer is:\nI think the answer is:\nI think the answer is:\nI think the answe'
+{
+  "new": {
+    "single": {
+      "arith": [
+        174,
+        175
+      ],
+      "multi": [
+        25,
+        25
+      ],
+      "clarify": [
+        40,
+        40
+      ],
+      "cannot": [
+        40,
+        40
+      ],
+      "neg": [
+        40,
+        40
+      ],
+      "correction": [
+        69,
+        80
+      ]
+    },
+    "mt": [
+      0,
+      100
+    ],
+    "speed": 92.46265136126726
+  },
+  "old": {
+    "single": {
+      "arith": [
+        174,
+        175
+      ],
+      "multi": [
+        25,
+        25
+      ],
+      "clarify": [
+        0,
+        40
+      ],
+      "cannot": [
+        19,
+        40
+      ],
+      "neg": [
+        40,
+        40
+      ],
+      "correction": [
+        0,
+        80
+      ]
+    },
+    "mt": [
+      0,
+      100
+    ],
+    "speed": 25.51657483771929
+  },
+  "pythia": {
+    "single": {
+      "arith": [
+        174,
+        175
+      ],
+      "multi": [
+        25,
+        25
+      ],
+      "clarify": [
+        0,
+        40
+      ],
+      "cannot": [
+        19,
+        40
+      ],
+      "neg": [
+        40,
+        40
+      ],
+      "correction": [
+        2,
+        80
+      ]
+    },
+    "mt": [
+      0,
+      100
+    ],
+    "speed": 192.0793174213824
+  }
+}

@@ -1,0 +1,21 @@
+
+ _   .-')                _ .-') _     ('-.             .-')                              _ (`-.    ('-.
+( '.( OO )_             ( (  OO) )  _(  OO)           ( OO ).                           ( (OO  ) _(  OO)
+ ,--.   ,--.).-'),-----. \     .'_ (,------.,--.     (_)---\_)   .-----.  .-'),-----.  _.`     \(,------.
+ |   `.'   |( OO'  .-.  ',`'--..._) |  .---'|  |.-') /    _ |   '  .--./ ( OO'  .-.  '(__...--'' |  .---'
+ |         |/   |  | |  ||  |  \  ' |  |    |  | OO )\  :` `.   |  |('-. /   |  | |  | |  /  | | |  |
+ |  |'.'|  |\_) |  |\|  ||  |   ' |(|  '--. |  |`-' | '..`''.) /_) |OO  )\_) |  |\|  | |  |_.' |(|  '--.
+ |  |   |  |  \ |  | |  ||  |   / : |  .--'(|  '---.'.-._)   \ ||  |`-'|   \ |  | |  | |  .___.' |  .--'
+ |  |   |  |   `'  '-'  '|  '--'  / |  `---.|      | \       /(_'  '--'\    `'  '-'  ' |  |      |  `---.
+ `--'   `--'     `-----' `-------'  `------'`------'  `-----'    `-----'      `-----'  `--'      `------'
+
+usage: modelscope upload [-h] [--repo-type {model,dataset}]
+                         [--commit-message COMMIT_MESSAGE]
+                         [--commit-description COMMIT_DESCRIPTION]
+                         [--revision REVISION]
+                         [--include ALLOW_PATTERNS [ALLOW_PATTERNS ...]]
+                         [--exclude IGNORE_PATTERNS [IGNORE_PATTERNS ...]]
+                         [--max-workers MAX_WORKERS]
+                         [--use-cache | --no-cache] [--disable-tqdm] [--sync]
+                         repo_id [local_path] [path_in_repo]
+modelscope upload: error: argument --repo-type/--repo_type: invalid choice: 'studio' (choose from model, dataset)

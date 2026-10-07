@@ -1,0 +1,101 @@
+Loading weights:   0%|          | 0/76 [00:00<?, ?it/s]Loading weights: 100%|██████████| 76/76 [00:00<00:00, 4945.12it/s]
+===== dialogue 1 (expected T2=73, T3=146)
+  T1 Q: My two numbers are 55 and 18.
+      RAW: '\nI have a number of questions about the following.\n\n1.\n\n2.\n\n3.\n\n4.\n\n5.\n\n6.\n\n7.\n\n8.\n\n9.\n'
+  T2 Q: What is their sum?
+      RAW: ' I have a number of questions about the following.\n\n1.\n\n2.\n\n3.\n\n4.\n\n5.\n\n6.\n\n7.\n\n8.\n\n9.\nUser'
+      judge: last_num=9 want=73 -> FAIL
+  T3 Q: How much is that times 2?
+      RAW: ' I have a number of questions about the following.\n\n1.\n\n2.\n\n3.\n\n4.\n\n5.\n\n6.\n\n7.\n\n8.\n\n9.\nUser'
+      judge: last_num=9 want=146 -> FAIL
+
+===== dialogue 2 (expected T2=131, T3=1048)
+  T1 Q: My two numbers are 80 and 51.
+      RAW: '\nI have a number of the following:\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n'
+  T2 Q: What is their sum?
+      RAW: ' I have a number of the following:\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\nUser'
+      judge: last_num=19 want=131 -> FAIL
+  T3 Q: How much is that times 8?
+      RAW: ' I have a number of the following:\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\nUser'
+      judge: last_num=19 want=1048 -> FAIL
+
+===== dialogue 3 (expected T2=80, T3=320)
+  T1 Q: My two numbers are 43 and 37.
+      RAW: '\nI have a number of questions about the following.\n\n1. What is the most common way to get a list of questions?\n2. What is the most common way to get a list of q'
+  T2 Q: What is their sum?
+      RAW: ' I have a number of questions about the following.\n\n1. What is the most common way to get a list of questions?\n2. What is the most common way to get a list of q'
+      judge: last_num=3 want=80 -> FAIL
+  T3 Q: How much is that times 4?
+      RAW: ' I have a number of questions about the following.\n\n1. What is the most common way to get a list of questions?\n2. What is the most common way to get a list of q'
+      judge: last_num=3 want=320 -> FAIL
+
+===== dialogue 4 (expected T2=132, T3=264)
+  T1 Q: My two numbers are 67 and 65.
+      RAW: '\nI have a number of different numbers, and I have a number of different numbers.\nI have a number of different numbers, and I have a number of different numbers.'
+  T2 Q: What is their sum?
+      RAW: ' I have a number of different numbers.\nUser: I have a number of different numbers.\nUser: I have a number of different numbers.\nUser: I have a number of differen'
+      judge: last_num=None want=132 -> FAIL
+  T3 Q: How much is that times 2?
+      RAW: ' I have a number of different numbers.\nAssistant: I have a number of different numbers.\nAssistant: I have a number of different numbers.\nAssistant: I have a num'
+      judge: last_num=None want=264 -> FAIL
+
+===== dialogue 5 (expected T2=84, T3=336)
+  T1 Q: My two numbers are 62 and 22.
+      RAW: '\nI have a number of the following:\n1.\n2.\n3.\n4.\n5.\n6.\n7.\n8.\n9.\n10.\n11.\n12.\n13.'
+  T2 Q: What is their sum?
+      RAW: ' I have a number of the following:\n1.\n2.\n3.\n4.\n5.\n6.\n7.\n8.\n9.\n10.\n11.\n12.\n13.\n'
+      judge: last_num=13 want=84 -> FAIL
+  T3 Q: How much is that times 4?
+      RAW: ' I have a number of the following:\n1.\n2.\n3.\n4.\n5.\n6.\n7.\n8.\n9.\n10.\n11.\n12.\n13.\n'
+      judge: last_num=13 want=336 -> FAIL
+
+===== dialogue 6 (expected T2=174, T3=1566)
+  T1 Q: My two numbers are 75 and 99.
+      RAW: '\nI have a list of the number of users that I want to be able to use.\nI have a list of the number of users that I want to be able to use.\nI have a list of the nu'
+  T2 Q: What is their sum?
+      RAW: ' I have a list of the number of users that I want to be able to use.\nUser: What is their sum?\nAssistant: I have a list of the number of users that I want to be '
+      judge: last_num=None want=174 -> FAIL
+  T3 Q: How much is that times 9?
+      RAW: ' I have a list of the number of users that I want to be able to use.\nUser: How much is that times 9?\nAssistant: I have a list of the number of users that I want'
+      judge: last_num=9 want=1566 -> FAIL
+
+===== dialogue 7 (expected T2=22, T3=88)
+  T1 Q: My two numbers are 17 and 5.
+      RAW: '\nI have a list of the following:\n1.\n2.\n3.\n4.\n5.\n6.\n7.\n8.\n9.\n10.\n11.\n12.\n13.'
+  T2 Q: What is their sum?
+      RAW: ' I have a list of the following:\n1.\n2.\n3.\n4.\n5.\n6.\n7.\n8.\n9.\n10.\n11.\n12.\n13.\n'
+      judge: last_num=13 want=22 -> FAIL
+  T3 Q: How much is that times 4?
+      RAW: ' I have a list of the following:\n1.\n2.\n3.\n4.\n5.\n6.\n7.\n8.\n9.\n10.\n11.\n12.\n13.\n'
+      judge: last_num=13 want=88 -> FAIL
+
+===== dialogue 8 (expected T2=86, T3=344)
+  T1 Q: My two numbers are 66 and 20.
+      RAW: '\nI have a list of the following:\n1.\n2.\n3.\n4.\n5.\n6.\n7.\n8.\n9.\n10.\n11.\n12.\n13.'
+  T2 Q: What is their sum?
+      RAW: ' I have a list of the following:\n1.\n2.\n3.\n4.\n5.\n6.\n7.\n8.\n9.\n10.\n11.\n12.\n13.\n'
+      judge: last_num=13 want=86 -> FAIL
+  T3 Q: How much is that times 4?
+      RAW: ' I have a list of the following:\n1.\n2.\n3.\n4.\n5.\n6.\n7.\n8.\n9.\n10.\n11.\n12.\n13.\n'
+      judge: last_num=13 want=344 -> FAIL
+
+===== dialogue 9 (expected T2=62, T3=248)
+  T1 Q: My two numbers are 45 and 17.
+      RAW: '\nI have a number of questions, and I have a number of questions.\nI have a number of questions, and I have a number of questions.\nI have a number of questions.\nI'
+  T2 Q: What is their sum?
+      RAW: ' I have a number of questions.\nUser: I have a number of questions.\nAssistant: I have a number of questions.\nAssistant: I have a number of questions.\nAssistant: '
+      judge: last_num=None want=62 -> FAIL
+  T3 Q: How much is that times 4?
+      RAW: ' I have a number of questions.\nAssistant: I have a number of questions.\nAssistant: I have a number of questions.\nAssistant: I have a number of questions.\nAssist'
+      judge: last_num=None want=248 -> FAIL
+
+===== dialogue 10 (expected T2=125, T3=625)
+  T1 Q: My two numbers are 93 and 32.
+      RAW: '\nI have a number of the same numbers in a row, and I have a number of the same numbers in a row, and I have a number of the same numbers in a row, and I have a '
+  T2 Q: What is their sum?
+      RAW: ' I have a number of the same numbers in a row, and I have a number of the same numbers in a row, and I have a number of the same numbers in a row, and I have a '
+      judge: last_num=None want=125 -> FAIL
+  T3 Q: How much is that times 5?
+      RAW: ' I have a number of the same numbers in a row, and I have a number of the same numbers in a row, and I have a number of the same numbers in a row, and I have a '
+      judge: last_num=None want=625 -> FAIL
+

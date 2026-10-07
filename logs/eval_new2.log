@@ -1,0 +1,33 @@
+
+===== LingJie-Chat-v2-Pro (56M) =====
+  arith       174/175 = 0.994
+  multi       25/25 = 1.000
+  clarify     40/40 = 1.000
+  cannot      40/40 = 1.000
+  neg         40/40 = 1.000
+  correction  67/80 = 0.838
+  TOTAL       386/400 = 0.965
+  FAIL[correction] I think 58 added to 77 is 145.
+      -> 'The result is 232.'
+  FAIL[correction] I think 88 product of 64 is 5633.
+      -> 'The result is 48.'
+  FAIL[correction] I think 64 product of 25 is 1610.
+      -> 'The result is 70.'
+  FAIL[correction] I think 96 over 68 is -0.5882000000000001.
+      -> '<CANNOT> I can only handle numbers with up to 6 digits.'
+  FAIL[correction] I think 94 divided by 91 is -0.9670000000000001.
+      -> '<CANNOT> I can only handle numbers with up to 6 digits.'
+  FAIL[correction] I think 37 over 99 is -0.6263000000000001.
+      -> '<CANNOT> I can only handle numbers with up to 6 digits.'
+  FAIL[correction] I think 39 divided by 32 is 0.2188000000000001.
+      -> '<CANNOT> I can only handle numbers with up to 6 digits.'
+  FAIL[correction] I think 99 divided by 97 is 11.0206.
+      -> 'The result is 196.'
+  FAIL[correction] I think 2 over 89 is 10.0225.
+      -> 'The final result is 16.'
+  FAIL[correction] I think 98 subtracted by 82 is 15.
+      -> 'The final result is 165555.'
+  FAIL[correction] I think 95 product of 55 is 5223.
+      -> 'The result is 475.'
+  FAIL[correction] I think 25 product of 92 is 2290.
+      -> 'The result is 34.'

@@ -1,0 +1,36 @@
+
+ _   .-')                _ .-') _     ('-.             .-')                              _ (`-.    ('-.
+( '.( OO )_             ( (  OO) )  _(  OO)           ( OO ).                           ( (OO  ) _(  OO)
+ ,--.   ,--.).-'),-----. \     .'_ (,------.,--.     (_)---\_)   .-----.  .-'),-----.  _.`     \(,------.
+ |   `.'   |( OO'  .-.  ',`'--..._) |  .---'|  |.-') /    _ |   '  .--./ ( OO'  .-.  '(__...--'' |  .---'
+ |         |/   |  | |  ||  |  \  ' |  |    |  | OO )\  :` `.   |  |('-. /   |  | |  | |  /  | | |  |
+ |  |'.'|  |\_) |  |\|  ||  |   ' |(|  '--. |  |`-' | '..`''.) /_) |OO  )\_) |  |\|  | |  |_.' |(|  '--.
+ |  |   |  |  \ |  | |  ||  |   / : |  .--'(|  '---.'.-._)   \ ||  |`-'|   \ |  | |  | |  .___.' |  .--'
+ |  |   |  |   `'  '-'  '|  '--'  / |  `---.|      | \       /(_'  '--'\    `'  '-'  ' |  |      |  `---.
+ `--'   `--'     `-----' `-------'  `------'`------'  `-----'    `-----'      `-----'  `--'      `------'
+
+2026-10-07 22:10:44,359 | INFO    | modelscope_hub.upload | Preparing files to upload ...
+2026-10-07 22:10:44,363 | INFO    | modelscope_hub.upload | Prepared 18 files for upload.
+2026-10-07 22:10:44,363 | INFO    | modelscope_hub.upload | Checking 18 files to upload ...
+2026-10-07 22:10:44,518 | INFO    | modelscope_hub.upload | Upload tracker loaded: 16 entries, 16 committed.
+2026-10-07 22:10:44,519 | INFO    | modelscope_hub.upload | Commit plan: 1 batch(es), 3 pending, 15 skipped (target 3 ops, request budget 8388608 bytes): 3 ops/32308 bytes/0 LFS
+2026-10-07 22:10:44,520 | INFO    | modelscope_hub.upload | 15 file(s) already committed, skipping.
+2026-10-07 22:10:44,520 | INFO    | modelscope_hub.upload | Scan complete: 18 total, 15 committed (skip), 3 to process.
+2026-10-07 22:10:44,520 | INFO    | modelscope_hub.upload | Uploading 3 file(s) in 1 batch(es) (pipeline mode).
+Uploading folder ms_repo → LingJie2026/LingJie-Chat-v2-Pro:/
+[Committing batches]:   0%|          | 0/1 [00:00<?, ?it/s]2026-10-07 22:10:45,836 | INFO    | modelscope_hub.upload | Batch 1/1: committed 3 file(s).
+[Committing batches]: 100%|██████████| 1/1 [00:01<00:00,  1.31s/it][Committing batches]: 100%|██████████| 1/1 [00:01<00:00,  1.31s/it]
+============================================================
+Upload Report
+------------------------------------------------------------
+  Total files       : 18
+  Skipped (cached)  : 15
+  Normal committed  : 3
+  LFS existed       : 0
+  LFS uploaded PUT  : 0
+  Failed            : 0
+  Committed         : 3
+  Deleted (sync)    : 0
+  Elapsed           : 1.5s
+============================================================
+Folder upload complete.

@@ -1,0 +1,55 @@
+{
+  "pretrain": {
+    "optimizer": "AdamW",
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "fused": true,
+    "lr_peak": 0.0003,
+    "lr_schedule": "cosine",
+    "warmup_steps": 200,
+    "min_lr_ratio": 0.1,
+    "weight_decay": 0.1,
+    "grad_clip": 1.0,
+    "precision": "fp16+GradScaler",
+    "micro_batch": 64,
+    "grad_accum": 4,
+    "effective_batch": 256,
+    "effective_batch_tokens": 262144,
+    "total_steps": 4600,
+    "total_tokens": "1.2B",
+    "curriculum": {
+      "last_frac": 0.1,
+      "curriculum_batch_frac": 0.4
+    },
+    "compile": true,
+    "measured_throughput_tok_s": 85413
+  },
+  "sft": {
+    "optimizer": "AdamW",
+    "lr": 1e-05,
+    "epochs": 2,
+    "micro_batch": 64,
+    "grad_accum": 4,
+    "weight_decay": 0.1,
+    "grad_clip": 1.0,
+    "max_len": 256,
+    "samples": 100000,
+    "head_loss_weights": {
+      "intent": 0.3,
+      "integrity": 0.2,
+      "parser": 0.2,
+      "critic": 0.1,
+      "template": 0.1,
+      "verb": 0.1
+    },
+    "lm_loss_mask": "assistant_segments_only"
+  },
+  "model_params": {
+    "total": 56417792,
+    "trunk": 56334464,
+    "heads": 83328
+  }
+}

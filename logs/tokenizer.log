@@ -1,0 +1,10 @@
+
+
+
+Traceback (most recent call last):
+  File "/data/coding/lingjie/build_tokenizer.py", line 84, in <module>
+    train(args.corpus, args.out, args.vocab)
+  File "/data/coding/lingjie/build_tokenizer.py", line 68, in train
+    assert normalize_for_eval(dec) == test, (dec, test)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('What is  4  8  2  7  plus  1  3 ? <CALC><EXPR> 4  8  2  7 + 1  3 </EXPR></CALC><RESULT> 4  8  4  0 </RESULT>', 'What is 4827 plus 13? <CALC><EXPR>4827+13</EXPR></CALC><RESULT>4840</RESULT>')
