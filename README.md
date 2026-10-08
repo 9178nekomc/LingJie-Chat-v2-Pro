@@ -11,7 +11,7 @@ tags:
 pipeline_tag: text-generation
 ---
 
-<p align="center"><img src="lingjie_logo.svg" width="180" alt="LingJie logo"></p>
+<p align="center"><img src="lingjie_logo.png" width="180" alt="LingJie logo"></p>
 
 # LingJie-Chat-v2-Pro（56.4M）
 
