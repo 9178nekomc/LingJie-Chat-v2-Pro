@@ -11,7 +11,7 @@ tags:
 pipeline_tag: text-generation
 ---
 
-<p align="center"><img src="lingjie_logo.png" width="180" alt="LingJie logo"></p>
+<p align="center"><img src="lingjie_logo.png" width="180" alt="file_0000000071088210a125870fb3692191.png"></p>
 
 # LingJie-Chat-v2-Pro（56.4M）
 
@@ -48,7 +48,7 @@ pipeline_tag: text-generation
 
 *两个 LingJie 模型推理为无 KV cache 全量重算实现；pythia 为 HF generate() KV-cache 增量解码。
 算术类打平是因为三方共享同一个确定性计算 harness——验证"能力分离：模型做识别、工具做计算"的设计。
-![benchmark](lingjie_benchmark.png)
+![benchmark](下载 （2）.png)
 
 ## 能力边界（诚实声明）
 
