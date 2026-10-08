@@ -48,7 +48,7 @@ pipeline_tag: text-generation
 
 *两个 LingJie 模型推理为无 KV cache 全量重算实现；pythia 为 HF generate() KV-cache 增量解码。
 算术类打平是因为三方共享同一个确定性计算 harness——验证"能力分离：模型做识别、工具做计算"的设计。
-![benchmark](下载 （2）.png)
+![benchmark](lingjie_benchmark.png)
 
 ## 能力边界（诚实声明）
 
