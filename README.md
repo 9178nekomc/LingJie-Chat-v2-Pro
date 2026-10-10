@@ -15,6 +15,25 @@ pipeline_tag: text-generation
 
 # LingJie-Chat-v2-Pro（56.4M）
 
+> **版权与原创性声明（Copyright & Originality Statement）**
+>
+> Copyright © 2026 LingJie2026. All rights reserved.
+>
+> 本模型（LingJie-Chat-v2-Pro）及其配套代码、Tokenizer、训练数据生成流程、JAM（Joint Attention–Convolution Model）/ GCA-60 架构设计，均为作者 **LingJie2026 独立原创完成**，不依赖任何预训练权重，亦未复制、改编或衍生自任何第三方模型架构或代码库。
+>
+> **关于 JAM 架构的原创性**：JAM（Joint Attention–Convolution Model，联合注意力-卷积模型，内部代号 GCA-60）是作者**基于 Transformer 范式深度重写、独立设计的原创架构**，其核心创新点包括但不限于：
+> 1. 在标准 Transformer Block 中**引入深度因果卷积（depthwise causal conv, k=5）作为独立的第三子层**，形成"注意力 + 卷积 + SwiGLU FFN"三通路联合结构（即 "Joint" 的由来）；
+> 2. 针对算术窄域任务设计的**多模块 Head（Intent / Integrity / Parser / Critic / Template / Verb）**，将行为监督从生成 logits 中解耦；
+> 3. **数字强制单字切分**的 Tokenizer 配套设计，作为逐位复述计算结果的结构性前提。
+>
+> 上述设计均为作者原创，**任何关于本模型"抄袭他人"的说法均与事实不符**。JAM 架构虽在思想上受益于 Transformer、RoPE、SwiGLU、深度可分离卷积等公开研究成果（这些工作均已在学术界公开发表并广泛使用），但其**具体架构组合、模块划分、训练配方与工程实现均为作者独立完成**，与任何现有开源模型不存在代码或权重层面的复制关系。
+>
+> 本仓库代码以 **Apache-2.0** 协议开源；模型权重可自由用于研究与商业用途，但请保留本版权声明。转载请注明出处。
+>
+> 如对原创性有异议，欢迎通过仓库 Issue 提出具体比对证据，作者愿以代码提交历史、训练日志等材料自证。
+
+---
+
 从零训练的 56.4M 参数窄域对话模型（GCA-60 架构），专注**算术识别 + 工具调用协议 + 行为规范**。
 不依赖任何预训练权重：Tokenizer、底模、SFT 全部自行完成。
 
@@ -89,12 +108,13 @@ print(pipe.answer("What is their sum?", minimal=True, history=hist))
 | `code/` | 模型定义 + 推理管线 + 评测脚本 |
 | `training_args.json` | 完整训练超参数 |
 
-
 ## JAM 架构详解
 
-LingJie-Chat-v2-Pro 采用自研的 **JAM（Joint Attention–Convolution Model，联合注意力-卷积模型）** 架构——
+LingJie-Chat-v2-Pro 采用作者独立原创的 **JAM（Joint Attention–Convolution Model，联合注意力-卷积模型）** 架构——
 内部代号 GCA-60（Gate-Convolution-Attention, 60M）。设计哲学：**小模型不做通用智能，
 在"算术识别 + 工具调用协议"这一窄域做到极致；能力分离——模型负责识别与决策，计算交给工具。**
+
+> **原创性再声明**：JAM 并非对任何现有架构的封装或微调，而是基于 Transformer 范式的**深度重写**。其"注意力 + 深度因果卷积 + SwiGLU"的三通路联合设计、多模块 Head 的行为解耦监督、数字单字切分的 Tokenizer 配套方案，均为作者原创，详见文首版权声明。
 
 ### 总体数据流
 
@@ -189,4 +209,3 @@ BPE 词表 8017 = ByteLevel BPE 8000 + 13 特殊 token + 4 对话 token。
 ## 在线体验
 
 - 魔搭模型页：https://www.modelscope.cn/models/LingJie2026/LingJie-Chat-v2-Pro
-- 创空间在线对话：https://www.modelscope.cn/studios/LingJie2026/lingjie-chat-demo
